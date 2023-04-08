@@ -14,6 +14,8 @@ const ConfigSchema = Type.Strict(
     LOG_LEVEL: Type.String(),
     API_HOST: Type.String(),
     API_PORT: Type.String(),
+    YOUTUBE_API_KEY: Type.String(),
+    COHERE_API_KEY: Type.String(),
   }),
 );
 

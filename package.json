@@ -21,6 +21,7 @@
     "@extractus/article-extractor": "^7.2.12",
     "@sinclair/typebox": "^0.26.8",
     "avj": "^0.0.0",
+    "cohere-ai": "^6.2.0",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "got": "^12.6.0"

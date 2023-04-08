@@ -1,4 +1,7 @@
-
+Scrape articles and summarize them
+    Scrape {cm:2023-04-08}
+    Summarize using OpenAI
+    Summarize using https://lablab.ai/tech/cohere
 #Research and add scheduler (cron or agenda) to the project
     <https://app.serverlessq.com>
         <https://docs.serverlessq.com/serverlessQ/getting-started>
