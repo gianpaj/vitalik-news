@@ -7,3 +7,5 @@ build
 
 # debug
 npm-debug.log*
+
+.env
