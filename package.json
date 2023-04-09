@@ -8,7 +8,7 @@
   "license": "ISC",
   "scripts": {
     "dev": "tsx watch src .env | pino-pretty --colorize",
-    "dev:scraper": "tsx watch src/scraper .env | pino-pretty --colorize",
+    "dev:generateVideo": "tsx watch src/generateVideo .env | pino-pretty --colorize",
     "build": "esbuild `find src \\( -name '*.ts' \\)` --platform=node --outdir=build --resolve-extensions=.js",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
@@ -21,6 +21,7 @@
     "@extractus/article-extractor": "^7.2.12",
     "@sinclair/typebox": "^0.26.8",
     "@types/lodash": "^4.14.192",
+    "audioconcat": "^0.1.4",
     "avj": "^0.0.0",
     "cohere-ai": "^6.2.0",
     "crawlee": "^3.0.0",
