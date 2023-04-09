@@ -1,6 +1,7 @@
-Generate speech from text using Play.ht
+Scrape a list of articles from a website using <https://crawlee.dev> and <https://apify.com>
+Scrape a list of websites from a JSON file
 Merge / de duplicate articles using https://mergent.co
-Upload mp3 to S3
+Upload mp3 to S3 ?
 #Research and add scheduler (cron or agenda) to the project
     <https://app.serverlessq.com>
         <https://docs.serverlessq.com/serverlessQ/getting-started>
@@ -23,6 +24,7 @@ Upload mp3 to S3
 
 # Done
 
+Generate speech from text using Play.ht {cm:2023-04-09}
 Scrape articles and summarize them {cm:2023-04-09}
     Scrape {cm:2023-04-08}
     Summarize using OpenAI {cm:2023-04-09}
