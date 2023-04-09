@@ -1,11 +1,12 @@
 import { Dataset, createCheerioRouter, EnqueueStrategy } from 'crawlee';
 import { extractFromHtml } from '@extractus/article-extractor';
+import summarize from 'summarize';
 
 const router = createCheerioRouter();
 
 const today = new Date().toISOString().slice(0, 10).replace(/-/g, '/');
 
-router.addDefaultHandler(async ({ request, enqueueLinks, log, globs }) => {
+router.addDefaultHandler(async ({ request, enqueueLinks, log }) => {
   log.info(`enqueueing new URLs`);
   log.debug(`Processing ${request.url}...`);
   await enqueueLinks({
@@ -19,11 +20,11 @@ router.addDefaultHandler(async ({ request, enqueueLinks, log, globs }) => {
       if (req.url.endsWith('.png') || req.url.endsWith('.jpg')) return false;
       return req;
     },
-    label: 'detail',
+    // label: 'detail',
   });
 });
 
-router.addHandler('detail', async ({ request, $, log }) => {
+router.addHandler('newsoutlet', async ({ request, $, log }) => {
   const title = $('title').text();
   log.info(`${title}`, { url: request.loadedUrl });
 
@@ -66,12 +67,19 @@ router.addHandler('detail', async ({ request, $, log }) => {
 
   //e.g. for cointelegraph
 
+  let summary: string | undefined;
+  if (articleContent) {
+    summary = await summarize(articleContent);
+  }
+
   await Dataset.pushData({
+    uniqueKey: request.loadedUrl,
     // hash
     // or uniqueKey?
     url: request.loadedUrl,
     title,
     article: articleContent,
+    summary,
   });
 });
 

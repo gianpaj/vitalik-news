@@ -4,7 +4,7 @@ import fs from 'fs';
 const PLAY_HT_VOICE_ID =
   's3://voice-cloning-zero-shot/8056212d-32e6-4302-a801-10abb2d44100/vitalik-50s-v1/manifest.json';
 
-const generateAudio = async (text: string) => {
+const generateAudio = async (text: string, filename: string) => {
   try {
     const body: PlayHTAPITTSResponse = await got
       .post('https://play.ht/api/v2/tts', {
@@ -29,7 +29,7 @@ const generateAudio = async (text: string) => {
       .json();
 
     console.log(body);
-    const { id } = body;
+    // const { id } = body;
 
     const mp3 = body._links.find((l) => l.contentType == 'text/audio/mpeg')?.href;
 
@@ -52,7 +52,7 @@ const generateAudio = async (text: string) => {
         },
       })
       .buffer();
-    const dest = `./mp3s/${id}.mp3`;
+    const dest = `./mp3s/${filename}`;
 
     fs.writeFileSync(dest, fileBuffer);
 

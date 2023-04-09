@@ -20,11 +20,13 @@
   "dependencies": {
     "@extractus/article-extractor": "^7.2.12",
     "@sinclair/typebox": "^0.26.8",
+    "@types/lodash": "^4.14.192",
     "avj": "^0.0.0",
     "cohere-ai": "^6.2.0",
     "crawlee": "^3.0.0",
     "dotenv": "^16.0.3",
-    "got": "^12.6.0"
+    "got": "^12.6.0",
+    "lodash": "^4.17.21"
   },
   "devDependencies": {
     "@types/node": "^18.15.11",

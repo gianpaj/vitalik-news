@@ -1,7 +1,17 @@
+Concatenate mp3 files
+    <https://github.com/jaggad/crunker>
 Scrape a list of articles from a website using <https://crawlee.dev> and <https://apify.com>
 Scrape a list of websites from a JSON file
 Merge / de duplicate articles using https://mergent.co
+#Research generate video
+    <https://stackoverflow.com/questions/24961127/how-to-create-a-video-from-images-with-ffmpeg>
+    <https://cliffordhall.com/2016/10/creating-video-server-node-js/>
+    <https://creatomate.com/blog/use-nodejs-to-generate-instagram-youtube-or-tiktok-videos>
+    <https://github.com/h2non/videoshow>
+    <https://www.npmjs.com/package/@ffmpeg/ffmpeg>
 Upload mp3 to S3 ?
+Upload video to Youtube
+    <https://github.com/porjo/youtubeuploader>
 #Research and add scheduler (cron or agenda) to the project
     <https://app.serverlessq.com>
         <https://docs.serverlessq.com/serverlessQ/getting-started>
@@ -38,3 +48,8 @@ Vercel scheduler? (hobby plan up to only 10sec) {cm}
 # Later
 
 - try deno
+
+# Other
+
+- VideoCrafter：A Toolkit for Text-to-Video Generation and Editing <https://github.com/VideoCrafter/VideoCrafter>
+- 
