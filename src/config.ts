@@ -16,6 +16,8 @@ const ConfigSchema = Type.Strict(
     API_PORT: Type.String(),
     YOUTUBE_API_KEY: Type.String(),
     COHERE_API_KEY: Type.String(),
+    PLAY_HT_API_KEY: Type.String(),
+    PLAY_HT_USER_ID: Type.String(),
   }),
 );
 

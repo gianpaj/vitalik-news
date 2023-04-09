@@ -9,3 +9,5 @@ build
 npm-debug.log*
 
 .env
+
+mp3s
