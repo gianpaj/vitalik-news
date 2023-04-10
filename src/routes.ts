@@ -46,13 +46,13 @@ router.addHandler('newsoutlet', async ({ request, $, log }) => {
     // find the article datePublished
     json['@graph']?.find((item: any) => {
       if (item['@type'] === 'Article') {
-        console.log(item.datePublished);
+        log.debug(item.datePublished);
         if (item.datePublished) {
           const date = new Date(item.datePublished);
           const dateStr = date.toISOString().slice(0, 10).replace(/-/g, '/');
           if (dateStr !== today) {
             // ignore this article
-            console.log('ignoring article');
+            log.info('ignoring article');
             return true;
           }
         }
@@ -63,7 +63,7 @@ router.addHandler('newsoutlet', async ({ request, $, log }) => {
   }
   // get the date from the content
   // const date = $('[data-hid="ldjson-schema"]').html(); //.attr('datetime');
-  // console.log(element);
+  // log.info(element);
 
   //e.g. for cointelegraph
 

@@ -8,7 +8,7 @@
   "license": "ISC",
   "scripts": {
     "dev": "tsx watch src .env | pino-pretty --colorize",
-    "dev:generateVideo": "tsx watch src/generateVideo .env | pino-pretty --colorize",
+    "dev:concatAudioFiles": "tsx src/concatAudioFiles .env | pino-pretty --colorize",
     "build": "esbuild `find src \\( -name '*.ts' \\)` --platform=node --outdir=build --resolve-extensions=.js",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",

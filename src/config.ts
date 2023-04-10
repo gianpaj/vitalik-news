@@ -12,8 +12,6 @@ const ConfigSchema = Type.Strict(
   Type.Object({
     // NODE_ENV: Type.Enum(NodeEnv),
     LOG_LEVEL: Type.String(),
-    API_HOST: Type.String(),
-    API_PORT: Type.String(),
     YOUTUBE_API_KEY: Type.String(),
     COHERE_API_KEY: Type.String(),
     PLAY_HT_API_KEY: Type.String(),

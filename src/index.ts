@@ -57,7 +57,7 @@ for (const dataSource of dataSourcesToCrawl) {
       const regex = new RegExp(regexStringToReplace);
       listOfUrls = listOfUrls.filter((url) => regex.test(url));
     }
-    listOfUrls.filter((url) => {
+    listOfUrls = listOfUrls.filter((url) => {
       const slug = url.replace(/[^a-zA-Z0-9]/g, '-');
       const filename = `${now.toISOString().slice(0, 10)}-${slug}.mp3`;
 
