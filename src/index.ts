@@ -45,7 +45,7 @@ const today = now.toISOString().slice(0, 10).replace(/-/g, '/');
 // const requestQueue = await RequestQueue.open();
 const requests = [];
 for (const dataSource of dataSourcesToCrawl) {
-  const { url, globs, regex: regexString, label, keyToFilterBy, keyOfData, keyWithContent } = dataSource;
+  const { url, regex: regexString, label, keyToFilterBy, keyOfData, keyWithContent } = dataSource;
 
   let listOfUrls: string[] = [];
   if (url.includes('rss')) {

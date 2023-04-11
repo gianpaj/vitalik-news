@@ -28,7 +28,7 @@ const generateAudio = async (text: string, filename: string) => {
       })
       .json();
 
-    console.log(body);
+    // console.log(body);
     // const { id } = body;
 
     const mp3 = body._links.find((l) => l.contentType == 'text/audio/mpeg')?.href;

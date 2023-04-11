@@ -4,25 +4,41 @@
 
 - [Vitalik News](#vitalik-news)
   - [📍 Overview](#-overview)
+  - [Where do we get the news?](#where-do-we-get-the-news)
   - [📡 Tech Stack](#-tech-stack)
   - [🛠 Future Development](#-future-development)
   - [🚀 Getting Started](#-getting-started)
   - [✅ Prerequisites](#-prerequisites)
   - [💻 Environment Variables](#-environment-variables)
-  - [🤖 Running](#-running)
+  - [🤖 Run it](#-run-it)
   - [🤓 Authors](#-authors)
 
 ## 📍 Overview
 
+## Where do we get the news?
+
+- <https://www.coindesk.com>
+- <https://cointelegraph.com>
+
+More in [dataSourceToCrawl.ts](src/dataSourceToCrawl.ts)
+
 ## 📡 Tech Stack
 
-**Server:** Node, Typescript
+- Node.js
+- TypeScript
+- Crawlee for crawling news websites
+- cohere.ai for summarization - <https://cohere.ai>
+- Play.ht for audio generation - <https://play.ht>
 
 ## 🛠 Future Development
 
-- [ ] x
-- [ ] y
-- [ ] z
+- [ ] Automate the process
+- [ ] Schedule the process
+- [ ] Summarize podcasts and YouTube videos
+- [ ] Upload video automatically to YouTube as unlisted
+- [ ] Upload audio automatically to Spotify as unlisted?
+- [ ] Generate a thumbnail for the video
+- [ ] Generate tiktok video. What't the limit?
 
 See [todo.md](todo.md) for more details.
 
@@ -34,11 +50,27 @@ See [todo.md](todo.md) for more details.
 
 To run this project, you will need to add the following environment variables to your .env file
 
-`API_KEY`
-
-`ANOTHER_API_KEY`
+```env
+LOG_LEVEL=debug
+COHERE_API_KEY=
+PLAY_HT_API_KEY=
+PLAY_HT_USER_ID=
+```
   
-## 🤖 Running
+## 🤖 Run it
+
+1. Scrape, summarize and generate individual audio files from news websites
+
+    ```bash
+      npm install
+      npm run start
+    ```
+
+2. Concatenate final audio
+
+    ```bash
+      npm run start:concatAudioFiles
+    ```
 
 ## 🤓 Authors
 
