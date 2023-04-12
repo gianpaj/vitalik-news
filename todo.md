@@ -1,6 +1,5 @@
-Scrape a list of articles from a website using <https://crawlee.dev> and <https://apify.com>
-Scrape a list of websites from a JSON file
-Merge / de duplicate articles using https://mergent.co
+Generate video description with the list of news
+Merge / de duplicate articles
 #Research generate video
     <https://stackoverflow.com/questions/24961127/how-to-create-a-video-from-images-with-ffmpeg>
     <https://cliffordhall.com/2016/10/creating-video-server-node-js/>
@@ -32,6 +31,9 @@ Upload video to Youtube
 
 # Done
 
+Concatenate from list of mp3s from a list of articles {cm:2021-04-12}
+Scrape a list of articles from a website using <https://crawlee.dev> and <https://apify.com> {cm:2021-04-10}
+Scrape a list of websites from a JSON file {cm:2021-04-10}
 Concatenate mp3 files using <audioconcat> {cm:2021-04-10}
 Generate speech from text using Play.ht {cm:2023-04-09}
 Scrape articles and summarize them {cm:2023-04-09}

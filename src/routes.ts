@@ -37,7 +37,9 @@ router.addHandler('newsoutlet', async ({ request, $, log }) => {
       articleContent = article?.content;
     }
   } catch (error) {
+    console.error(`error extracting article from ${request.loadedUrl}`);
     console.error(error);
+    return;
   }
 
   const element = await $('script[type="application/ld+json"]').html();
@@ -45,7 +47,7 @@ router.addHandler('newsoutlet', async ({ request, $, log }) => {
     const json = JSON.parse(element);
     // find the article datePublished
     json['@graph']?.find((item: any) => {
-      if (item['@type'] === 'Article') {
+      if (item['@type'] === 'Article' || item['@type'] === 'NewsArticle') {
         log.debug(item.datePublished);
         if (item.datePublished) {
           const date = new Date(item.datePublished);
@@ -70,6 +72,11 @@ router.addHandler('newsoutlet', async ({ request, $, log }) => {
   let summary: string | undefined;
   if (articleContent) {
     summary = await summarize(articleContent);
+  }
+
+  if (!summary) {
+    log.error(`no summary for ${request.loadedUrl}`);
+    throw new Error(`no summary for ${request.loadedUrl}`);
   }
 
   await Dataset.pushData({

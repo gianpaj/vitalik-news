@@ -11,6 +11,9 @@ npm-debug.log*
 .env
 
 mp3s
+*.mp3
+*.mp4
+*.wav
 
 # crawlee
 storage
