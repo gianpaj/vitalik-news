@@ -1,3 +1,4 @@
+Setup AWS with API Key & Upload mp3 to S3 and output link?
 Generate video description with the list of news
 Merge / de duplicate articles
 #Research generate video
@@ -6,7 +7,6 @@ Merge / de duplicate articles
     <https://creatomate.com/blog/use-nodejs-to-generate-instagram-youtube-or-tiktok-videos>
     <https://github.com/h2non/videoshow>
     <https://www.npmjs.com/package/@ffmpeg/ffmpeg>
-Upload mp3 to S3 ?
 Upload video to Youtube
     <https://github.com/porjo/youtubeuploader>
 #Research and add scheduler (cron or agenda) to the project
