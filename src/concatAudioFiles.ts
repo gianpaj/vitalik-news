@@ -10,8 +10,16 @@ const today = now.toISOString().slice(0, 10);
 const files = fs.readdirSync('./mp3s');
 
 const todaysFiles = files.filter((file) => file.includes(today)).map((file) => `mp3s/${file}`);
+const filesWithSilence = [];
+// add a 1 sec of silence in between each file
+for (let i = 0; i < todaysFiles.length; i++) {
+  filesWithSilence.push(todaysFiles[i]);
+  if (i !== todaysFiles.length - 1) {
+    filesWithSilence.push('mp3s/1-sec-silence.mp3');
+  }
+}
 
-const audio = ['mp3s/intro.mp3', ...todaysFiles, 'mp3s/outro.mp3'];
+const audio = ['mp3s/intro.mp3', ...filesWithSilence, 'mp3s/outro.mp3'];
 
 // measure the size of the audio files in MB
 const totalSize = audio.reduce((acc, file) => {
@@ -58,7 +66,7 @@ const concatAudio = () =>
     .on('start', (command: string) => {
       console.log('ffmpeg process started:', command);
     })
-    .on('error', (err: any, stdout, stderr) => {
+    .on('error', (err: any, _stdout: string, stderr: string) => {
       console.error('Error:', err);
       console.error('ffmpeg stderr:', stderr);
     })
