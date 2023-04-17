@@ -2,6 +2,8 @@
 
 > Everyday summary of crypto news, recommendations/summaries on podcasts/interviews.
 
+<a href="https://madepublic.io/projects/vitalik-news?source=embed" target="_blank"> <img src="https://madepublic.io/images/embed.png" width="240" /> </a>
+
 - [Vitalik News](#vitalik-news)
   - [📍 Overview](#-overview)
   - [Where do we get the news?](#where-do-we-get-the-news)
