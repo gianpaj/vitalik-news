@@ -10,6 +10,7 @@
     "start": "tsx src | pino-pretty --colorize",
     "dev": "tsx watch src .env | pino-pretty --colorize",
     "start:concatAudioFiles": "tsx src/concatAudioFiles | pino-pretty --colorize",
+    "start:summarizePdf": "tsx src/summarizePdf",
     "build": "esbuild `find src \\( -name '*.ts' \\)` --platform=node --outdir=build --resolve-extensions=.js",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
@@ -22,13 +23,15 @@
     "@extractus/article-extractor": "^7.2.12",
     "@sinclair/typebox": "^0.26.8",
     "@types/lodash": "^4.14.192",
+    "arg": "^5.0.2",
     "audioconcat": "^0.1.4",
     "avj": "^0.0.0",
     "cohere-ai": "^6.2.0",
     "crawlee": "^3.3.1",
     "dotenv": "^16.0.3",
     "got": "^12.6.0",
-    "lodash": "^4.17.21"
+    "lodash": "^4.17.21",
+    "pdf2json": "^3.0.3"
   },
   "devDependencies": {
     "@types/node": "^18.15.11",

@@ -71,7 +71,7 @@ router.addHandler('newsoutlet', async ({ request, $, log }) => {
 
   let summary: string | undefined;
   if (articleContent) {
-    summary = await summarize(articleContent);
+    summary = await summarize({ text: articleContent });
   }
 
   if (!summary) {

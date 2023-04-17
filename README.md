@@ -32,8 +32,11 @@ More in [dataSourceToCrawl.ts](src/dataSourceToCrawl.ts)
 
 ## 🛠 Future Development
 
-- [ ] Automate the process
-- [ ] Schedule the process
+- [ ] Automate the process in Github Actions
+- [ ] Make a simple website with a button to start the Github Action
+  - [ ] List the news and their summary
+  - [ ] Select which news to include in the final audio
+  - [ ] Generate the final audio
 - [ ] Summarize podcasts and YouTube videos
 - [ ] Upload video automatically to YouTube as unlisted
 - [ ] Upload audio automatically to Spotify as unlisted?
