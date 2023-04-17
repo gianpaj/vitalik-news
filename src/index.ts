@@ -101,7 +101,7 @@ for (const dataSource of dataSourcesToCrawl) {
               continue;
             }
             console.log('filename', filename);
-            const summary = await summarize(item[keyWithContent || '']);
+            const summary = await summarize({ text: item[keyWithContent || ''] });
 
             const data = {
               title: item.title,
