@@ -27,7 +27,7 @@
     "audioconcat": "^0.1.4",
     "avj": "^0.0.0",
     "cohere-ai": "^6.2.0",
-    "crawlee": "^3.3.1",
+    "crawlee": "^3.3.3",
     "dotenv": "^16.0.3",
     "got": "^12.6.0",
     "lodash": "^4.17.21",
